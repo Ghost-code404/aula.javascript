@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha página</title>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+  <h1>Meu primeiro JS</h1>
+</br>
+</br>
+  //String
+</br>
+</br>
+console.log("Exemplos de string:");
+</br>
+var nome ="Gabriel Aguiar";
+</br>
+var idade = 20;
+</br>
+var idade2 = 10;
+</br>
+alert(idade + idade2);
+</br>
+</br>
+
+var frase = "Japão é o melhor time do mundo";
+</br>
+console.log(frase);
+</br>
+console.log(frase.replace("Japão", "Brasil"));
+</br>
+alert(frase.replace("Japão", "Brasil"));
+</br>
+console.log(frase.toUpperCase())
+</br>
+console.log(frase.toLowerCase())
+</br>
+</br>
+
+//Array
+</br>
+</br>
+console.log("Exemplos de Array:")
+</br>
+var lista = ["maçã", "pêra", "laranja"]
+</br>
+console.log(lista);
+</br>
+console.log(lista[0]);
+</br>
+console.log(lista[1]);
+</br>
+console.log(lista[2]);
+</br>
+lista.push("uva");
+</br>
+console.log(lista)
+</br>
+console.log(lista[0]);
+</br>
+console.log(lista[1]);
+</br>
+console.log(lista[2]);
+</br>
+console.log(lista[3]);
+</br>
+lista.pop();
+</br>
+console.log(lista);
+</br>
+console.log(lista[0]);
+</br>
+console.log(lista[1]);
+</br>
+console.log(lista[2]);
+</br>
+console.log(lista[3]);
+</br>
+console.log(lista.length);
+</br>
+console.log(lista.reverse());
+</br>
+console.log(lista.toString());
+</br>
+console.log(lista.join(" - "));
+</br>
+</br>
+//Dicionário
+</br>
+</br>
+var fruta = {nome:"maçã", cor:"vermelha"};
+</br>
+console.log(fruta);
+</br>
+</br>
+//lista de dicionários
+</br>
+var frutas = [{nome:"maçã", cor:"vermelha"}, {nome:"uva", cor:"roxa"}];
+</br>
+console.log(frutas);
+</br>
+console.log(frutas[1].nome);
+</br>
+</br>
+//Condicionais
+</br>
+</br>
+var idade = prompt("Qual sua idade");
+</br>
+if (idade >= 18){
+</br>
+    alert("Maior de idade");
+</br>
+}
+</br>
+else{
+</br>
+    alert("Menor de idade");
+</br>
+}
+</br>
+</br>
+//While (repetição)
+</br>
+</br>
+console.log("Repetição")
+</br>
+var count = 0;
+</br>
+while(count <= 5){
+</br>
+    console.log("count: " + count);
+</br>
+    count = count+1;
+</br>
+}
+</br>
+</br>
+//For (repetição)
+</br>
+</br>
+console.log("For")
+</br>
+var count2;
+</br>
+for(count2=0; count2<=5; count2++){
+</br>
+    console.log("count2: " + count2);
+</br>
+}
+</br>
+</br>
+//Data
+</br>
+</br>
+var data = new Date();
+</br>
+console.log(data);
+</br>
+console.log(data.getMonth() + 1);
+</br>
+console.log(data.getFullYear());
+</br>
+console.log(data.getDay());
+</br>
+console.log(data.getHours());
+</br>
+console.log(data.getMinutes());
+</br>
+console.log(data.getSeconds());
+</br>
+</br>
+//Função
+</br>
+console.log("FUNÇÃO")
+</br>
+function soma(n1, n2){
+</br>
+    return n1 + n2;
+</br>
+}
+</br>
+console.log(soma(5, 10));
+</br>
+function setReplace(frase, nome, novo_nome){
+</br>
+    return frase.replace(nome, novo_nome);
+</br>
+}
+</br>
+console.log("vai Japão")
+</br>
+console.log(setReplace("vai Japão", "Japão", "Brasil"));
+</br>
+</br>
+var validar;
+</br>
+</br>
+function validaIdade(idade){
+</br>
+    validar;
+</br>
+    if(idade <= 18){
+    </br>
+        validar = true;
+    </br>
+    }
+</br>
+    else{
+    </br>
+        validar=false
+    </br>
+    }
+</br>
+    return validar;
+</br>
+}
+</br>
+var idade = prompt("qual a sua idade");
+</br>
+validaIdade(idade);
+</br>
+console.log(validar);
+</br>
+
+<button type="button" onclick="botao()">Clique aqui</button>
+<h3 id="agradecimento"></h3>
+</br>
+
+//Botão (injetando elemento html5 na pagina web)
+</br></br>
+
+function botao(){
+</br>
+ alert("Obrigado por clicar");
+</br>
+ document.getElementById("agradecimento");
+</br>
+ console.log(document.getElementById("agradecimento").innerHTML = "Obrigado por clicar")
+</br>
+}
+</br>
+
+<button type="button" onclick="google()">Google</button>
+</br></br>
+
+//Botão (abre uma nova janela para outro site)
+</br></br>
+
+function google(){
+</br>
+    window.open("https://www.google.com/");
+</br>
+}
+</br></br>
+
+<button type="button" onclick="youtube()">YouTube</button>
+
+</br></br>
+
+//Botão (abre outro site na mesma pagina)
+</br></br>
+
+
+function youtube(){
+</br>
+    window.location.href = "https://www.youtube.com/";
+</br>
+}
+</br>
+</br>
+
+<h3 id="mouseMove" onmouseover="trocar()">Passe o mouse aqui</h3>
+</br>
+</br>
+
+//Interações com o passar do maouse
+</br>
+</br>
+function trocar(){
+</br>
+    document.getElementById("mouseMove").innerHTML = "Obrigado por passar o mouse"
+</br>
+    alert("Trocar texto")
+</br>
+}
+</br>
+
+<div class="botoes">
+    <button type="button" onclick="botao()">Clique aqui</button>
+    <h3 id="agradecimento"></h3>
+
+    <button type="button" onclick="google()">Google</button>
+
+    <button type="button" onclick="youtube()">YouTube</button>
+
+    <h3 id="mouseMove" onmouseover="trocar()">Passe o mouse aqui</h3>
+
+</div>
+</body>
+</html>
